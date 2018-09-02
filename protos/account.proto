@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package account;
+
+message Account{
+  string name=1;
+  string idCard=2;
+  int32 gender=3;
+  string zip=4;
+  string address=5;
+  string birthday=6;
+  string mobile=7;
+  string tel=8;
+  string fax=9;
+  string email=10;
+  string nation=11;
+  string created=12;
+}
+
+message Res{
+  int32 code =1;
+  string msg=2;
+  string err=3;
+}
+
+service AccountOp{
+  rpc AddAccount(Account) returns(Res) {}
+}
